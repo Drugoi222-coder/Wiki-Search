@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+.wikiSearch {
+    padding-top: 50px;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.wikiSearch__panel {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    justify-content: space-between;
+}
+
+.wikiSearch__language {
+    width: 50px;
+    height: 100%;
+}
+
+.wikiSearch__search,
+.wikiSearch__language {
+    height: 100%;
+    border: none;
+    transition: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    background-color: rgba(173, 173, 173, 0.5);
+}
+
+.wikiSearch__search {
+    width: 70px;
+}
+
+.wikiSearch__input {
+    padding: 5px;
+    height: 100%;
+    outline: none;
+    width: 85%;
+    border-radius: 5px;
+    border: 1px solid rgba(173, 173, 173, 0.526);
+}
+
+.wikiSearch__list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.wikiSearch__list-item {
+    width: 100%;
+}
+
+.wikiSearch__link {
+    height: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(173, 173, 173, 0.526);
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    display: block;
+    transition: .4s;
+}
+
+.wikiSearch__link:hover {
+    background-color: rgba(184, 184, 184, 0.4);
+}
+
+.wikiSearch__search:hover,
+.wikiSearch__language:hover {
+    background-color: rgba(173, 173, 173, 0.2);
+}
+
+.wikiSearch__img {
+    width: 85%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+}
