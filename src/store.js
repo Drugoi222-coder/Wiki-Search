@@ -1,5 +1,6 @@
 import { makeAutoObservable } from "mobx";
-import { languages, russianFlag } from "./constants";
+import { languages } from "./constants";
+import russianFlag from "./assets/img/Russian_flag.png";
 
 class WikiStore {
     searchValue = "";

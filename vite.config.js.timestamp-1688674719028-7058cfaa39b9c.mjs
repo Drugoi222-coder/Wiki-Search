@@ -1,0 +1,11 @@
+// vite.config.js
+import { defineConfig } from "file:///D:/JS-%D0%9F%D1%80%D0%B5%D0%B4%D0%BC%D0%B5%D1%82%D1%8B-%D0%9C%D1%83%D1%81%D0%BE%D1%80/JS/Wiki%20Search/node_modules/vite/dist/node/index.js";
+import react from "file:///D:/JS-%D0%9F%D1%80%D0%B5%D0%B4%D0%BC%D0%B5%D1%82%D1%8B-%D0%9C%D1%83%D1%81%D0%BE%D1%80/JS/Wiki%20Search/node_modules/@vitejs/plugin-react/dist/index.mjs";
+var vite_config_default = defineConfig({
+  plugins: [react()],
+  base: "/Wiki-Search/"
+});
+export {
+  vite_config_default as default
+};
+//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsidml0ZS5jb25maWcuanMiXSwKICAic291cmNlc0NvbnRlbnQiOiBbImNvbnN0IF9fdml0ZV9pbmplY3RlZF9vcmlnaW5hbF9kaXJuYW1lID0gXCJEOlxcXFxKUy1cdTA0MUZcdTA0NDBcdTA0MzVcdTA0MzRcdTA0M0NcdTA0MzVcdTA0NDJcdTA0NEItXHUwNDFDXHUwNDQzXHUwNDQxXHUwNDNFXHUwNDQwXFxcXEpTXFxcXFdpa2kgU2VhcmNoXCI7Y29uc3QgX192aXRlX2luamVjdGVkX29yaWdpbmFsX2ZpbGVuYW1lID0gXCJEOlxcXFxKUy1cdTA0MUZcdTA0NDBcdTA0MzVcdTA0MzRcdTA0M0NcdTA0MzVcdTA0NDJcdTA0NEItXHUwNDFDXHUwNDQzXHUwNDQxXHUwNDNFXHUwNDQwXFxcXEpTXFxcXFdpa2kgU2VhcmNoXFxcXHZpdGUuY29uZmlnLmpzXCI7Y29uc3QgX192aXRlX2luamVjdGVkX29yaWdpbmFsX2ltcG9ydF9tZXRhX3VybCA9IFwiZmlsZTovLy9EOi9KUy0lRDAlOUYlRDElODAlRDAlQjUlRDAlQjQlRDAlQkMlRDAlQjUlRDElODIlRDElOEItJUQwJTlDJUQxJTgzJUQxJTgxJUQwJUJFJUQxJTgwL0pTL1dpa2klMjBTZWFyY2gvdml0ZS5jb25maWcuanNcIjtpbXBvcnQgeyBkZWZpbmVDb25maWcgfSBmcm9tIFwidml0ZVwiO1xyXG5pbXBvcnQgcmVhY3QgZnJvbSBcIkB2aXRlanMvcGx1Z2luLXJlYWN0XCI7XHJcblxyXG5leHBvcnQgZGVmYXVsdCBkZWZpbmVDb25maWcoe1xyXG4gICAgcGx1Z2luczogW3JlYWN0KCldLFxyXG4gICAgYmFzZTogXCIvV2lraS1TZWFyY2gvXCJcclxufSk7XHJcbiJdLAogICJtYXBwaW5ncyI6ICI7QUFBc1csU0FBUyxvQkFBb0I7QUFDblksT0FBTyxXQUFXO0FBRWxCLElBQU8sc0JBQVEsYUFBYTtBQUFBLEVBQ3hCLFNBQVMsQ0FBQyxNQUFNLENBQUM7QUFBQSxFQUNqQixNQUFNO0FBQ1YsQ0FBQzsiLAogICJuYW1lcyI6IFtdCn0K

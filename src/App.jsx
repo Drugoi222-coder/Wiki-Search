@@ -1,5 +1,7 @@
 import { getPageUrl, getWikiData, preventEventDefault } from "./utils.js";
-import { languages, russianFlag, britishFlag } from "./constants.js";
+import { languages } from "./constants.js";
+import russianFlag from "./assets/img/Russian_flag.png";
+import britishFlag from "./assets/img/british_flag.webp";
 import { observer } from "mobx-react";
 import { nanoid } from "nanoid";
 import "normalize.css";
