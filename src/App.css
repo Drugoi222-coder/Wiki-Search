@@ -6,33 +6,38 @@
 
 body {
     height: 100vh;
-    background: no-repeat linear-gradient(to top,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%),
-        100% 100% / 100% fixed no-repeat url("./assets/img/background.jpg");
+    background: no-repeat
+            linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0) 0%,
+                rgba(0, 0, 0, 0.7) 100%
+            ),
+        center 100% / cover fixed no-repeat url("./assets/img/background.jpg");
 }
 
 .wikiSearch {
     padding-top: 50px;
-    width: 60vw;
+    width: 80vw;
     margin: 0 auto;
 }
 
 .wikiSearch__panel {
     display: flex;
     align-items: center;
-    height: 30px;
+    height: 40px;
     color: white;
     justify-content: space-between;
     font-family: "Montserrat";
 }
 
 .wikiSearch__language {
-    width: 50px;
     height: 100%;
+    width: 50px;
 }
 
 .wikiSearch__search,
 .wikiSearch__language {
-    height: 115%;
+    height: 110%;
     border: none;
     transition: 0.4s;
     cursor: pointer;
@@ -44,13 +49,14 @@ body {
 .wikiSearch__search {
     font-size: 24px;
     color: white;
+    width: 13%;
 }
 
 .wikiSearch__input {
     padding: 15px 5px;
     height: 100%;
     outline: none;
-    width: 85%;
+    width: 80%;
     border-radius: 5px;
     background-color: transparent;
     color: white;
@@ -67,10 +73,12 @@ body {
 
 .wikiSearch__list-item {
     width: 100%;
+    font-family: "Montserrat";
+    font-size: 20px;
 }
 
 .wikiSearch__link {
-    height: 30px;
+    height: 35px;
     cursor: pointer;
     margin-top: 10px;
     border-radius: 5px;
@@ -89,7 +97,8 @@ body {
 
 .wikiSearch__search:hover,
 .wikiSearch__language:hover {
-    background-color: rgba(173, 173, 173, 0.852);
+    background-color: rgba(173, 173, 173, 0.9);
+    color: black;
 }
 
 .wikiSearch__img {
@@ -97,4 +106,47 @@ body {
     display: flex;
     margin: 0 auto;
     align-items: center;
+}
+
+@media (max-width: 1439px) {
+    .wikiSearch {
+        width: 90vw;
+    }
+    .wikiSearch__search {
+        width: 15%;
+    }
+    .wikiSearch__input {
+        width: 75%;
+    }
+}
+
+@media (max-width: 767px) {
+    .wikiSearch__panel {
+        display: flex;
+        height: auto;
+        flex-direction: column;
+    }
+    .wikiSearch__img {
+        width: 50pxа;
+    }
+    .wikiSearch__search,
+    .wikiSearch__language,
+    .wikiSearch__input {
+        width: 100%;
+        font-size: 28px;
+    }
+
+    .wikiSearch__search,
+    .wikiSearch__language {
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .wikiSearch__language {
+        height: auto;
+    }
+    .wikiSearch__link {
+        font-size: 28px;
+        height: auto;
+    }
 }
