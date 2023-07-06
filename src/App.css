@@ -1,5 +1,13 @@
+@import "./assets/fonts/fonts.css";
+
 * {
     box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: no-repeat linear-gradient(to top,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%),
+        100% 100% / 100% fixed no-repeat url("./assets/img/background.jpg");
 }
 
 .wikiSearch {
@@ -12,7 +20,9 @@
     display: flex;
     align-items: center;
     height: 30px;
+    color: white;
     justify-content: space-between;
+    font-family: "Montserrat";
 }
 
 .wikiSearch__language {
@@ -22,7 +32,7 @@
 
 .wikiSearch__search,
 .wikiSearch__language {
-    height: 100%;
+    height: 115%;
     border: none;
     transition: 0.4s;
     cursor: pointer;
@@ -32,16 +42,20 @@
 }
 
 .wikiSearch__search {
-    width: 70px;
+    font-size: 24px;
+    color: white;
 }
 
 .wikiSearch__input {
-    padding: 5px;
+    padding: 15px 5px;
     height: 100%;
     outline: none;
     width: 85%;
     border-radius: 5px;
-    border: 1px solid rgba(173, 173, 173, 0.526);
+    background-color: transparent;
+    color: white;
+    font-size: 24px;
+    border: 2px solid white;
 }
 
 .wikiSearch__list {
@@ -63,10 +77,10 @@
     border: 1px solid rgba(173, 173, 173, 0.526);
     padding: 5px;
     text-decoration: none;
-    color: black;
+    color: white;
     width: 100%;
     display: block;
-    transition: .4s;
+    transition: 0.4s;
 }
 
 .wikiSearch__link:hover {
@@ -75,7 +89,7 @@
 
 .wikiSearch__search:hover,
 .wikiSearch__language:hover {
-    background-color: rgba(173, 173, 173, 0.2);
+    background-color: rgba(173, 173, 173, 0.852);
 }
 
 .wikiSearch__img {

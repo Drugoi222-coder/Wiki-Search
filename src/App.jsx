@@ -22,9 +22,18 @@ const App = observer(({ store }) => {
         ));
 
     const getTitles = async () => {
-        const rawData = await getWikiData(language, searchValue);
-        const data = rawData.pages.map(({ key, title }) => ({ key, title }));
-        store.setDataArr(createLinksList(data));
+        if (searchValue.length > 0) {
+            const rawData = await getWikiData(language, searchValue);
+            const data = rawData.pages.map(({ key, title }) => ({
+                key,
+                title,
+            }));
+            if (data.length > 0) {
+                store.setDataArr(createLinksList(data));
+            }
+        } else {
+            store.setDataArr([]);
+        }
     };
 
     const setSearchValue = (e) => store.setSearchValue(e.target.value);
