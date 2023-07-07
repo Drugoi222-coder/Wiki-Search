@@ -1,21 +1,19 @@
 import { getPageUrl, getWikiData, preventEventDefault } from "./utils.js";
 import { languages } from "./constants.js";
-import russianFlag from "./assets/img/Russian_flag.png";
-import britishFlag from "./assets/img/british_flag.webp";
 import { observer } from "mobx-react";
 import { nanoid } from "nanoid";
 import "normalize.css";
 import "./App.css";
 
 const App = observer(({ store }) => {
-    const { language, searchValue, dataArray, imgSrc } = store;
+    const { langInfo, searchValue, dataArray } = store;
 
     const createLinksList = (array) =>
-        array.map(({ key, title }) => (
+        array.map(({ key: wikiKey, title }) => (
             <li key={nanoid()} className="wikiSearch__list-item">
                 <a
                     className="wikiSearch__link"
-                    href={getPageUrl(language, key)}
+                    href={getPageUrl(langInfo.langKey, wikiKey)}
                     target="_blank"
                 >
                     {title}
@@ -25,7 +23,7 @@ const App = observer(({ store }) => {
 
     const getTitles = async () => {
         if (searchValue.length > 0) {
-            const rawData = await getWikiData(language, searchValue);
+            const rawData = await getWikiData(langInfo.langKey, searchValue);
             const data = rawData.pages.map(({ key, title }) => ({
                 key,
                 title,
@@ -41,12 +39,10 @@ const App = observer(({ store }) => {
     const setSearchValue = (e) => store.setSearchValue(e.target.value);
 
     const switchLanguage = () => {
-        if (language === languages.ru) {
-            store.setImgSrc(britishFlag);
-            store.setLanguage(languages.en);
-        } else if (language === languages.en) {
-            store.setImgSrc(russianFlag);
-            store.setLanguage(languages.ru);
+        if (langInfo.langKey === languages.ru) {
+            store.setLangInfo(languages.en);
+        } else if (langInfo.langKey === languages.en) {
+            store.setLangInfo(languages.ru);
         }
     };
 
@@ -65,7 +61,7 @@ const App = observer(({ store }) => {
                     onClick={switchLanguage}
                     className="wikiSearch__language"
                 >
-                    <img className="wikiSearch__img" src={imgSrc} />
+                    <img className="wikiSearch__img" src={langInfo.imgSrc} />
                 </button>
             </div>
             <ul className="wikiSearch__list">{dataArray}</ul>
